@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loja</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<body>
+  <main>
+    <header>
+      <h1>Catálogo de Produtos</h1>
+      <p>Confira nossos produtos selecionados especialmente para você.</p>
+    </header>
+
+<div class="menu-toggle-wrapper">
+        <button id="menuToggleButton" class="menu-toggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir e Fechar Menu">
+            <span class="menu-toggle-ball">
+                <span class="hamburger-icon"></span>
+            </span>
+        </button>
+    </div>
+
+<nav id="mainMenu" class="main-menu" aria-label="Menu Principal de Navegação">
+        <div class="menu-header">
+            <h3>Menu</h3>
+            <button id="closeMenuButton" class="close-menu-button" aria-label="Fechar Menu">
+                &times; </button>
+        </div>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section arial-label="Lista de produtos">
+      <div class="catalogo-produtos">
+        <div class="produto-card"></div>
+          <article>
+            <figure>
+              <img src="imagens/tenissf.png" alt="Tênis esportivo azul" />
+            </figure>
+            <h2>Tênis Esportivo Azul</h2>
+            <p>Confortável e resistente, ideal para corridas e atividades físicas.</p>
+            <p class="preco" aria-label="Preço do produto">R$ 249,90</p>
+            <button type="button" aria-label="Comprar Tênis Esportivo Azul">Comprar</button>
+          </article>
+        </div>
+
+        <div class="produto-card">
+          <article>
+            <figure>
+              <img src="imagens/relogiosf.png" alt="Relógio de pulso moderno" />
+            </figure>
+            <h2>Relógio de Pulso Moderno</h2>
+            <p>Design elegante e funcionalidades inteligentes para seu dia a dia.</p>
+            <p class="preco" aria-label="Preço do produto">R$ 499,00</p>
+            <button type="button" aria-label="Comprar Relógio de Pulso Moderno">Comprar</button>
+          </article>
+        </div>
+
+        <div class="produto-card">
+          <article>
+            <figure>
+              <img src="imagens/mochilasf.png" alt="Mochila para laptop resistente" />
+            </figure>
+            <h2>Mochila para Laptop</h2>
+            <p>Espaçosa e confortável, protege seu equipamento com estilo.</p>
+            <p class="preco" aria-label="Preço do produto">R$ 179,90</p>
+            <button type="button" aria-label="Comprar Mochila para Laptop">Comprar</button>
+          </article>
+        </div>
+      </ul>
+    </section>
+  </main>
+</body>
+
+  <button onclick="logout()">Sair</button>
+
+  <script src="js/auth.js"></script>
+  <script src="js/fundoAnimado.js"></script>
+    <script src="js/menu.js"></script>
+  <script>
+    if (!isLogado()) {
+      alert("Você precisa estar logado!");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
